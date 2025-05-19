@@ -1,0 +1,47 @@
+@use "../abstract/" as *;
+
+.container {
+  max-width: $container-width;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+@for $i from 1 through 10 {
+    .mb-#{$i} {
+      margin-bottom: #{$i}rem;
+    }
+  
+    .pb-#{$i} {
+      padding-bottom: #{$i}rem;
+    }
+  }
+  
+  $alignments: left, right, center, justify;
+  
+  @each $alignment in $alignments {
+    .text-#{$alignment} {
+      text-align: #{$alignment};
+    }
+  }
+  
+  $colors: (
+    "primary": $primary,
+    "dark": $dark,
+    "light": $light,
+    "gray": $gray,
+  );
+  
+  @each $key, $val in $colors {
+    .bg-#{$key} {
+      background-color: #{$val};
+    }
+    .text-#{$key} {
+      color: #{$val};
+    }
+  
+    .border-#{$key} {
+      border-color: #{$val};
+    }
+  }
+  

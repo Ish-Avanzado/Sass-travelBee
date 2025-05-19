@@ -1,0 +1,18 @@
+@use "../abstract/" as *;
+
+.header {
+  background: $dark;
+  color: $light;
+  padding: 2rem 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    ul {
+      display: flex;
+      gap: 1rem;
+    }
+  }
+  .burger__menu i {
+    font-size: 3rem;
+  }
+}

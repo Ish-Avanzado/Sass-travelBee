@@ -1,0 +1,57 @@
+@use "../abstract" as *;
+
+@font-face {
+  font-family: "Mulish-Italic";
+  src: url(../Mulish-Italic-VariableFont_wght.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url(../Mulish-VariableFont_wght.ttf);
+  font-display: swap;
+}
+@font-face {
+  font-family: "RobotoSlab";
+  src: url(../RobotoSlab-VariableFont_wght.ttf);
+  font-display: swap;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  font-family: RobotoSlab;
+}
+
+h1 {
+  font-size: clamp(4rem, calc(4rem + 1vw), 6rem);
+  line-height: 1.5;
+}
+h2 {
+  font-size: clamp(3rem, calc(3rem + 1vw), 4.5rem);
+  line-height: 1.5;
+}
+h3 {
+  font-size: clamp(2rem, calc(2rem + 1vw), 3.5rem);
+  line-height: 1.5;
+}
+h4 {
+  font-size: clamp(1.6rem, calc(1.6rem + 1vw), 2rem);
+  line-height: 1.5;
+}
+h5 {
+  font-size: clamp(1.4rem, calc(1.6rem + 1vw), 1.6rem);
+  line-height: 1.5;
+}
+h6 {
+  font-size: clamp(1.2rem, calc(1.6rem + 1vw), 1.4rem);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,26 @@
+@use "../abstract/" as *;
+
+.btn {
+  padding: 1rem 2.5rem;
+  border: 1px solid transparent;
+  display: inline-flex;
+  font-size: 1.4rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  &-primary {
+    background: $primary;
+    color: $light;
+    &:hover {
+      opacity: 0.9;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+  &-dark {
+    background: $dark;
+    color: $light;
+    &:hover {
+      opacity: 0.9;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@use "../abstract/" as *;
+
+.homeBanner {
+  &__wrapper {
+    background-color: darken($color: #000000, $amount: 0);
+    padding: 5rem 0;
+    color: $light;
+    position: relative;
+  }
+
+  &__topImage {
+    @include backgroundImage($url: "/dist/img/homeBanner.png");
+    width: 100%;
+    height: 50rem;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    h1 {
+      padding-top: 10rem;
+    }
+    p {
+      margin: 3rem auto;
+      max-width: 60rem;
+    }
+    img {
+      position: absolute;
+      right: -3rem;
+      top: 20rem;
+    }
+  }
+  &__bottomImage {
+    @include backgroundImage($url: "/dist/img/homebanner-2.jpg");
+    width: 100%;
+    height: 40rem;
+
+    .bilog {
+      position: relative;
+      place-self: center;
+      top: 19rem;
+    }
+
+    span {
+      display: block;
+      width: 6rem;
+      height: 6rem;
+      background-color: $light;
+      border-radius: 50%;
+    }
+
+    img {
+      position: absolute;
+      top: 20rem;
+      right: 1.3rem;
+      padding: 1rem;
+      background-color: $dark;
+      border-radius: 50%;
+    }
+  }
+  .smallcardWhite {
+    display: block;
+    width: 20rem;
+    height: 26rem;
+    background-color: $light;
+    position: absolute;
+    bottom: 1rem;
+    right: 18rem;
+    transform: rotate(-30deg);
+    img {
+      @include imageCover(100%, 15rem);
+      padding: 1rem;
+    }
+  }
+  .smallcardBlack  {
+    display: block;
+    width: 20rem;
+    height: 26rem;
+    background-color: $dark;
+    color: $light;
+    position: absolute;
+    bottom: 40rem;
+    left: 15rem;
+    transform: rotate(30deg);
+    img {
+      @include imageCover(100%, 15rem);
+      padding: 1rem;
+    }
+  }
+}
