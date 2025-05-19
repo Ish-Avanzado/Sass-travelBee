@@ -4,15 +4,91 @@
   background: $dark;
   color: $light;
   padding: 2rem 0;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
   &__wrapper {
     display: flex;
     justify-content: space-between;
     ul {
       display: flex;
-      gap: 1rem;
+      gap: 2rem;
+      li {
+        &:hover {
+          color: $primary;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .active {
+    color: $primary;
+    text-decoration: underline;
+  }
+  &__nav1 {
+    @include mediaQuery($tablet) {
+      position: absolute;
+      padding-top: 10rem;
+      top: 7rem;
+      width: 100%;
+      overflow: hidden;
+      right: 0;
+      height: 100rem;
+      background: $dark;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 2px solid $light;
+      transition: all 0.5s ease-in-out;
+      opacity: 0;
+      li {
+        font-size: 2.5rem;
+        font-family: RobotoSlab;
+      }
+    }
+  }
+  &__nav2 {
+    @include mediaQuery($tablet) {
+      position: absolute;
+      top: 35rem;
+      display: flex;
+      left: 0;
+      width: 100%;
+      overflow: hidden;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      transition: all 0.5s ease-in-out;
+      li {
+        font-size: 2.5rem;
+        font-family: RobotoSlab;
+      }
+    }
+  }
+  &__nav1.open {
+    opacity: 100;
+    transition: all 0.5s ease-in-out;
+  }
+  &__nav2.open {
+    opacity: 100;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .burger__menu {
+    display: none;
+    @include mediaQuery($tablet) {
+      display: block;
     }
   }
   .burger__menu i {
     font-size: 3rem;
+  }
+  .burger__menu.open i {
+    color: $primary;
+  }
+  .burger__menu.open {
+    transform: rotate(360deg);
+    transition: all 0.5s ease-in-out;
+    // opacity: 0.5;
   }
 }

@@ -26,6 +26,9 @@
       position: absolute;
       right: -3rem;
       top: 20rem;
+      @include mediaQuery($mobile) {
+        display: none;
+      }
     }
     img:last-child {
       position: absolute;
@@ -45,6 +48,12 @@
   &__wrapper {
     padding: 5rem 0;
     @include grid(4, 2rem);
+    @include mediaQuery($tablet) {
+      @include grid(3, 2rem);
+    }
+    @include mediaQuery($mobile) {
+      @include grid(2, 2rem);
+    }
     img {
       @include imageCover(100%, auto);
     }

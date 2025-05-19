@@ -26,6 +26,9 @@
       position: absolute;
       right: -3rem;
       top: 20rem;
+      @include mediaQuery($mobile) {
+        display: none;
+      }
     }
     img:last-child {
       position: absolute;
