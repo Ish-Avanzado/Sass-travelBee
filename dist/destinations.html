@@ -12,6 +12,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -20,10 +24,14 @@
           <ul class="header__nav1">
             <li><a href="./home.html">Home</a></li>
             <li><a href="./about.html">About Us</a></li>
-            <li><a href="./destinations.html" class="active">Destination</a></li>
+            <li>
+              <a href="./destinations.html" class="active">Destination</a>
+            </li>
           </ul>
           <div class="header__branding">
-            <img src="./img/white-logo.png" alt="travel-bee-logo" />
+            <a href="./destinations.html"
+              ><img src="./img/white-logo.png" alt="travel-bee-logo"
+            /></a>
           </div>
           <div></div>
           <ul class="header__nav2">
@@ -42,7 +50,9 @@
         <div class="destinationBanner__image">
           <h1>Destinations</h1>
           <p>
-            Check out stories and photographs from my travels from the 50+ countries around the world, and explore the blog posts below by destinations
+            Check out stories and photographs from my travels from the 50+
+            countries around the world, and explore the blog posts below by
+            destinations
           </p>
           <div class="button">
             <a href="" class="btn btn-primary">BACK TO HOME</a>
@@ -54,38 +64,51 @@
     </section>
 
     <section class="places">
-        <div class="container">
-            <h2>Destinations You Will Not Want To Miss</h2>
-        <p>
-          56 countries, 114 locations
-        </p>
-            <div class="places__wrapper">
-                <img src="./img/location-1.jpg" alt="location-1">
-                <img src="./img/location-2.jpg" alt="location-2">
-                <img src="./img/location-3.jpg" alt="location-3">
-                <img src="./img/location-4.jpg" alt="location-4">
-                <img src="./img/location-5.png" alt="location-5">
-                <img src="./img/location-6.png" alt="location-6">
-                <img src="./img/location-7.png" alt="location-7">
-                <img src="./img/location-8.png" alt="location-8">
-                <img src="./img/location-9.png" alt="location-9">
-                <img src="./img/location-10.png" alt="location-10">
-                <img src="./img/location-11.png" alt="location-11">
-                <img src="./img/location-12.png" alt="location-12">
-                <img src="./img/location-13.png" alt="location-13">
-                <img src="./img/location-14.png" alt="location-14">
-                <img src="./img/location-15.png" alt="location-15">
-                <img src="./img/location-16.png" alt="location-16">
-                
-
-            </div>
+      <div class="container">
+        <h2>Destinations You Will Not Want To Miss</h2>
+        <p>56 countries, 114 locations</p>
+        <div class="places__wrapper">
+          <img src="./img/location-1.jpg" alt="location-1" />
+          <img src="./img/location-2.jpg" alt="location-2" />
+          <img src="./img/location-3.jpg" alt="location-3" />
+          <img src="./img/location-4.jpg" alt="location-4" />
+          <img src="./img/location-5.png" alt="location-5" />
+          <img src="./img/location-6.png" alt="location-6" />
+          <img src="./img/location-7.png" alt="location-7" />
+          <img src="./img/location-8.png" alt="location-8" />
+          <img src="./img/location-9.png" alt="location-9" />
+          <img src="./img/location-10.png" alt="location-10" />
+          <img src="./img/location-11.png" alt="location-11" />
+          <img src="./img/location-12.png" alt="location-12" />
+          <img src="./img/location-13.png" alt="location-13" />
+          <img src="./img/location-14.png" alt="location-14" />
+          <img src="./img/location-15.png" alt="location-15" />
+          <img src="./img/location-16.png" alt="location-16" />
         </div>
+      </div>
     </section>
 
     <section class="display">
       <small><i class="fa-brands fa-instagram"></i> FIND ME ON INSTAGRAM</small>
       <h3>Connect@TravelBee</h3>
       <div class="display__wrapper">
+        <img src="./img/display-1.png" alt="display-1" />
+        <img src="./img/display-2.png" alt="display-2" />
+        <img src="./img/display-3.png" alt="display-3" />
+        <img src="./img/display-4.png" alt="display-4" />
+        <img src="./img/display-5.png" alt="display-5" />
+        <img src="./img/display-6.png" alt="display-6" />
+        <img src="./img/feature-1.png" alt="feature-6" />
+      </div>
+      <!-- <div class="slider__nav">
+        <i class="fa-solid fa-chevron-left"></i>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div> -->
+    </section>
+    <section class="displayM">
+      <small><i class="fa-brands fa-instagram"></i> FIND ME ON INSTAGRAM</small>
+      <h3>Connect@TravelBee</h3>
+      <div class="displayM__wrapper">
         <img src="./img/display-1.png" alt="display-1" />
         <img src="./img/display-2.png" alt="display-2" />
         <img src="./img/display-3.png" alt="display-3" />
@@ -134,6 +157,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

@@ -16,14 +16,14 @@
       li {
         &:hover {
           color: $primary;
-          text-decoration: underline;
+          // text-decoration: underline;
         }
       }
     }
   }
   .active {
     color: $primary;
-    text-decoration: underline;
+    // text-decoration: underline;
   }
   &__nav1 {
     @include mediaQuery($tablet) {

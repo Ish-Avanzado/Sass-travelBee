@@ -1,6 +1,7 @@
 @use "../abstract/" as *;
 
 .homeBanner {
+  position: relative;
   &__wrapper {
     background-color: darken($color: #000000, $amount: 0);
     padding: 5rem 0;
@@ -21,11 +22,15 @@
     p {
       margin: 3rem auto;
       max-width: 60rem;
+      padding: 0 2rem;
     }
     img {
       position: absolute;
       right: -3rem;
       top: 20rem;
+      @include mediaQuery($tablet) {
+        display: none;
+      }
       @include mediaQuery($mobile) {
         display: none;
       }
@@ -65,9 +70,12 @@
     height: 26rem;
     background-color: $light;
     position: absolute;
-    bottom: 1rem;
-    right: 18rem;
+    bottom: -10rem;
+    right: 25rem;
     transform: rotate(-30deg);
+    @include mediaQuery($tablet) {
+      display: none;
+    }
     @include mediaQuery($mobile) {
       display: none;
     }
@@ -83,9 +91,12 @@
     background-color: $dark;
     color: $light;
     position: absolute;
-    bottom: 40rem;
-    left: 15rem;
+    bottom: 27rem;
+    left: 20rem;
     transform: rotate(30deg);
+    @include mediaQuery($tablet) {
+      display: none;
+    }
     @include mediaQuery($mobile) {
       display: none;
     }

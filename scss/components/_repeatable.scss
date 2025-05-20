@@ -14,7 +14,7 @@
 
   &__wrapper {
     @include gridCustom(1fr 1fr, 5rem);
-    padding: 8rem 0;
+    padding: 5rem 0;
     @include mediaQuery($mobile) {
       @include gridCustom(1fr, 2rem);
       padding: 3rem 0;
@@ -23,7 +23,7 @@
   &__item {
     @include gridCustom(1fr 2fr, 2rem);
     margin-bottom: 1rem;
-    @include mediaQuery($mobile) {
+    @include mediaQuery($tablet) {
       @include gridCustom(1fr, 2rem);
     }
     img {
@@ -41,7 +41,7 @@
     }
     p {
       text-align: left;
-      margin-bottom: 1.5rem;
+      margin-block: 1.5rem;
     }
     a {
       font-weight: bold;
@@ -51,7 +51,7 @@
 
 .adventure {
   padding: 5rem 0;
-  &_image {
+  &__image {
     position: relative;
   }
   &__wrapper {
@@ -94,20 +94,19 @@
   text-align: center;
   h2 {
     margin-top: 5rem;
-    @include mediaQuery($mobile) {
-      margin-top: 0rem;
-    }
   }
   p {
     opacity: 0.7;
     margin-top: 1rem;
   }
   &__image {
-    display: flex;
-    gap: 2rem;
+    @include grid(4, 2rem);
     margin: 3rem 0;
+    @include mediaQuery($tablet) {
+      @include grid(2, 2rem);
+    }
     @include mediaQuery($mobile) {
-      flex-direction: column
+      @include grid(1, 2rem);
     }
     img {
       @include imageCover(100%, 35rem);
@@ -121,7 +120,7 @@
     @include mediaQuery($mobile) {
       @include gridCustom(1fr, 3rem);
     }
-    h4 {
+    h3 {
       margin-top: 1rem;
     }
     p {
@@ -190,6 +189,12 @@
       display: flex;
       gap: 2rem;
       margin-bottom: 2rem;
+      @include mediaQuery($tablet) {
+        flex-direction: column;
+      }
+      @include mediaQuery($mobile) {
+        flex-direction: row;
+      }
       img {
         @include imageCover(18rem, 12rem);
       }
@@ -208,8 +213,12 @@
 }
 
 .display {
+  @include mediaQuery($mobile) {
+    display: none;
+  }
   padding: 5rem 0;
   text-align: center;
+  position: relative;
   small {
     font-size: 1.5rem;
     opacity: 0.7;
@@ -223,6 +232,7 @@
   &__wrapper {
     display: flex;
     padding: 5rem 0;
+
     @include mediaQuery($mobile) {
       flex-direction: column;
       gap: 2rem;
@@ -232,4 +242,46 @@
       @include imageCover(100%, 22rem);
     }
   }
+  // .slider__nav {
+  //   position: absolute;
+  //   top: 26rem;
+  //   color: $light;
+  //   width: 98%;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   margin: 2rem;
+  // }
+}
+.displayM {
+  display: none;
+  @include mediaQuery($mobile) {
+    display: block;
+  }
+  padding: 5rem 0;
+  text-align: center;
+  small {
+    font-size: 1.5rem;
+    opacity: 0.7;
+
+    i {
+      color: $primary;
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+  }
+  &__wrapper {
+    padding: 5rem 0;
+    img {
+      @include imageCover(100%, 22rem);
+    }
+  }
+  // .slider__nav {
+  //   position: absolute;
+  //   top: 26rem;
+  //   color: $light;
+  //   width: 98%;
+  //   display: flex;
+  //   justify-content: space-between;
+  //   margin: 2rem;
+  // }
 }
